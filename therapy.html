@@ -4,8 +4,9 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Autism Community StLouis</title>
-    <link href="./css/style2.css" rel="stylesheet" />
-    <script src="./script/new.js"></script>
+    <link rel="stylesheet" href="css/style2.css" type="text/css">
+    <script type='text/javascript' src='script/therapy.json'></script>
+    <script type='text/javascript' src='script/new.js'></script>
 
 </head>
 
@@ -21,7 +22,7 @@
             </li>
             &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
             <li>
-                <a href="therapy.html">Resources</a>
+                <a href="resource.html">Resources</a>
                 <ul>
                     <li><a href="therapy.html">Therapies Near me </a></li>
                     <li><a href="camps.html">Camps and Recreational Activities near me </a></li>
@@ -44,7 +45,7 @@
             Thearpy Centers and Providers Near Me
         </h1>
     </div>
-    <div>
+    <div class='div-noformat'>
         Cities
         <select id="city">
     <option value="ba">Ballwin</option>
@@ -52,16 +53,15 @@
     <option value="mh">Maryland Heights</option>
     <option value="st">St Louis</option>
   </select> &nbsp&nbsp&nbsp&nbsp&nbsp Therapies
-        <td>
-            <select id="therapy">
+        <select id="therapy">
     <option value="aba">ABA Therapy </option>
     <option value="ot">Occupational Therapy </option>
     <option value="pt">Physical Therapy </option>
     <option value="st">Speech Therapy</option>
   </select> &nbsp&nbsp&nbsp&nbsp&nbsp
-            <button type="button" onclick="addTable()" )> Find Resources </button>
+        <button type="button" onclick="createStructure()" )> Find Resources </button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="map.html" target="_blank"> View in  Map </a>
     </div>
-    <div id="myDynamicTable">
 </body>
 
 </html>

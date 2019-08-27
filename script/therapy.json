@@ -1,0 +1,39 @@
+resourcenetwork = [
+   {
+     "city": "BA",
+     "therapy": "PT",
+	 "provider": "Apex Cemter Physical Therapy",
+     "address": "884 Woods Mill Rd #200, Ballwin, MO 63011",
+   },
+   {
+     "city": "BA",
+     "therapy": "ABA",
+	 "provider": "Autism and Behavioral Spectrum",
+     "address": "14733 Clayton Rd, Ballwin, MO 63011",
+   },
+   {
+     "city": "BA",
+     "therapy": "OT",
+	 "provider": "Therapy Relief Inc.,",
+     "address": "16216 Baxter Rd # 330, Chesterfield, MO 63017",
+   },
+   {
+     "city": "MD",
+     "therapy": "PT",
+	 "provider": "St Louis Physical Therapy",
+     "address": "9437 Olive Blvd, St. Louis, MO 63132",
+   },
+   {
+     "city": "MD",
+     "therapy": "ABA",
+	 "provider": "Behavior Intervention Services LLC",
+     "address": "2644 Metro Blvd, Maryland Heights, MO 63043",
+   },
+   {
+     "city": "MD",
+     "therapy": "OT",
+	 "provider": "Mind & Body",
+     "address": "2388 Schuetz Rd, St. Louis, MO 63146",
+   }
+   
+];

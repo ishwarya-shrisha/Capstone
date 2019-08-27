@@ -1,0 +1,29 @@
+markers = [
+   {
+     "name": "Maryland Heights",
+     "url": "https://en.wikipedia.org/wiki/Canada",
+     "lat": 38.7017,
+     "lng": -90.4082
+   },
+      {
+        "name": "Maryland Heights",
+        "url": "https://en.wikipedia.org/wiki/Canada",
+        "lat": 38.6609,
+        "lng": -90.226
+      },
+         {
+           "name": "Ballwin",
+           "url": "https://en.wikipedia.org/wiki/Canada",
+           "lat": 38.5951,
+           "lng": -90.5462
+         },
+            {
+	      "name": "Weldon Spring",
+	      "url": "https://en.wikipedia.org/wiki/Canada",
+	      "lat": 38.7134,
+	      "lng": -90.6893
+	    }
+
+
+
+];

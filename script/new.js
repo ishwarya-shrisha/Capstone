@@ -1,80 +1,49 @@
-/*
-Java Script Function
-*/
-function myFunction() {
-    var resource1 = new Array('ABA Therapy', 'ABA Center1', 'ABA Therapy', 'ABA Center2', 'ABA Therapy', 'ABA Center3');
-    var tbl = document.createElement('table');
-    var tblBody = document.createElement('tbody');
-    var j = 0;
-    var k = 1;
+let numberOfTiles = 6;
+let randomNum = Math.floor(Math.random() * numberOfTiles);
 
-    for (var i = 0; i < resource1.length; i++) {
-        // creates a table row
-        var row = table.createElement('tr');
+let signs = [];
+//function that creates array of signs to be displayed on the tiles.
+function createSignsArr() {
+    for (i = 1; i <= (numberOfTiles / 2); i++) {
+        signs.push(i);
+    }
+    return signs
+}
+createSignsArr();
+//creating an array with couples of signs
+let signsDouble = signs.concat(signs);
 
-        for (var j = 0; j < 2; j++) {
-            // Create a <td> element and a text node, make the text
-            // node the contents of the <td>, and put the <td> at
-            // the end of the table row
-            var cell = document.createElement('td');
-            var cellText = document.createTextNode(resource1[j]);
+function createStructure() {
+    console.log('fired');
+    let numberOfTiles = resourcenetwork.Length * 2;
+    alert(numberOfTiles);
+    let container = document.createElement('div');
+    container.setAttribute('class', 'container');
+    document.body.appendChild(container);
+    for (let i = 0; i < 12; i++) {
+        let div = document.createElement('div');
+        div.setAttribute('class', 'tile');
+        div.setAttribute('id', `tile${i}`)
+        container.appendChild(div);
 
-            cell.appendChild(cellText);
-            row.appendChild(cell);
+        let j = 0;
+        do {
+
+            var v_string1 = resourcenetwork[i].provider;
+            var v_string2 = resourcenetwork[i].address;
+            let v_newline = '\n';
+            //	  var v_string3 = v_string1.concat(v_string2);
+            var v_string3 = v_string1 + '\n' + v_string2;
+
+            let randomArrayNum = signsDouble.splice(randomNum, 1);
+            document.getElementById(`tile${i}`).innerHTML = v_string3;
+            j++;
         }
 
-        // add the row to the end of the table body
-        tblBody.appendChild(row);
-    }
-    // put the <tbody> in the <table>
-    tbl.appendChild(tblBody);
-    // appends <table> into <body>
-    body.appendChild(tbl);
-    // sets the border attribute of tbl to 2;
-    tbl.setAttribute('border', '2');
-}
 
-function addTable() {
+        while (j < numberOfTiles);
 
-    var resource1 = new Array('ABA Therapy', 'ABA Center1', 'ABA Therapy', 'ABA Center2', 'ABA Therapy', 'ABA Center3');
-    var resource2 = new Array('ABA Therapy', 'ABA Center4', 'Occupation Therapy', 'OT Center1', 'Physical Therapy', 'PT Center1');
+    } //end of for loop
+} //end of createStructure function
 
-    var e = document.getElementById('city');
-    var result = e.options[e.selectedIndex].value;
-
-    if (result == 'ba') {
-        var resource3 = [...resource1];
-    }
-    if (result == 'mh') {
-        var resource3 = [...resource2];
-    }
-
-    var myTableDiv = document.getElementById('myDynamicTable');
-
-    var table = document.createElement('TABLE');
-
-    table.border = '1';
-
-    var tableBody = document.createElement('TBODY');
-
-    table.appendChild(tableBody);
-    var k = 0;
-
-    for (var i = 0; i < (resource3.length / 2); i++) {
-        var tr = document.createElement('TR');
-
-        tableBody.appendChild(tr);
-
-        for (var j = 0; j < 2; j++) {
-            var td = document.createElement('TD');
-
-            td.width = '75';
-            //           td.appendChild(document.createTextNode("Cell " + i + "," + j));
-            td.appendChild(document.createTextNode(resource3[k]));
-            tr.appendChild(td);
-            k += 1;
-        }
-    }
-    myTableDiv.appendChild(table);
-
-}
+//window.onload = createStructure();
