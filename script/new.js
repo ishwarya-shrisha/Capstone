@@ -16,7 +16,6 @@ let signsDouble = signs.concat(signs);
 function createStructure() {
     console.log('fired');
     let numberOfTiles = resourcenetwork.Length * 2;
-    alert(numberOfTiles);
     let container = document.createElement('div');
     container.setAttribute('class', 'container');
     document.body.appendChild(container);
